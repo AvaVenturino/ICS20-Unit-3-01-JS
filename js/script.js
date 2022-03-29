@@ -10,14 +10,12 @@
  */
 function calculate () {
   // input
-  const hoursWorked = parseInt(document.getElementById("number--of-hours-worked").value)
-  const hourlyRate = parseInt(document.getElementById("hourly-rate").value)
+  const baseA = parseInt(document.getElementById("base-A").value)
+  const baseB = parseInt(document.getElementById("base-B").value)
+  const height = parseInt(document.getElementById("height-of-trapezoid").value)
   // process
-  const pay = (hoursWorked * hourlyRate) * (1.00 - 0.18)
-  const taxes = (hoursWorked * hourlyRate) * 0.18
+  const area = [(baseA + baseB)/ 2] * height
   // output
-  document.getElementById("payment").innerHTML =
-    "Your pay will be: " + ' $' + pay.toFixed(2)
-  document.getElementById("income-tax").innerHTML =
-    "The government will take: " + ' $' + taxes.toFixed(2)
+  document.getElementById("area").innerHTML =
+    "The area is: " + area + ' mm²' 
 }
